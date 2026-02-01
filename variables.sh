@@ -2,6 +2,10 @@
 
 # This is comment in the shell script it will not exicuted by bash.
 
+START_TIME=$(date +%s)
+
+echo "Script executed at: $START_TIME"
+
 # case:1
 
 echo "variable initilization case:1"
@@ -35,3 +39,20 @@ echo "your name is : $username"
 echo "please enter your password:"
 read -s password
 echo "entered password: $password"
+
+#### Special Variables ####
+echo "All args passed to script: $@"
+echo "Number of vars passed to script: $#"
+echo "Script name: $0"
+echo "Present directory: $PWD"
+echo "Who is running: $USER"
+echo "Home directory of current user: $HOME"
+echo "PID of this script: $$"
+sleep 100 &
+echo "PID of recently executed background process: $!"
+echo "All args passed to script: $*"
+
+END_TIME=$(date +%s)
+TOTAL_TIME=$(($END_TIME-$START_TIME))
+
+echo "Script executed in: $TOTAL_TIME seconds"
