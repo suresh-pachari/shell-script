@@ -53,7 +53,7 @@ echo "PID of recently executed background process: $!"
 echo "All args passed to script: $*"
 
 END_TIME=$(date +%s)
-echo"script end time : $END_TIME"
+echo "script end time : $END_TIME"
 
 TOTAL_TIME=$(($END_TIME-$START_TIME))
 
