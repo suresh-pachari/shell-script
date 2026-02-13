@@ -7,6 +7,8 @@ SUM=$(($NUM2+$NUM1))
 
 echo "total sum is : $SUM"
 
+echo "file name is:$0"
+
 # Array
 FRUITS=("Apple" "Banana" "Pomo")
 
